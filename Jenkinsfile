@@ -1,10 +1,11 @@
 pipeline {
     agent any
     stages {
-        stage('Upload to AWS') {
+        stage('Lint HTML') {
             steps {
-                withAWS(credentials: 'aws-static', region: 'us-west-2') {
-                    s3Upload(bucket:'static-demo-jenkins',file:'index.html')
+                
+                tidy -q -e *.html
+
 
                 }
             }
