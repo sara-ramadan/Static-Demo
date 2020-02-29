@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Lint HTML') {
             when {
-                branch 'master'
+                branch 'Jenkins'
             }
             steps { 
                 tidy -q -e *.html
