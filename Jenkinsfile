@@ -4,7 +4,7 @@ pipeline {
         stage('Lint HTML') {
             steps {
                 echo 'Building Container..'
-				tidy -q -e *.html 
+		tidy -q -e *.html 
 
             }
         }
