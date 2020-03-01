@@ -4,7 +4,7 @@ pipeline {
         stage('Lint HTML') {
             steps {
                 script{
-                    tidy -q -e *.html  --ShellScript
+                    tidy -q -e *.html
                 }
                 
             }
