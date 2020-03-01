@@ -3,7 +3,10 @@ pipeline {
     stages {
         stage('Lint HTML') {
             steps {
-                tidy -q -e *.html
+                script{
+                    tidy -q -e *.html
+                }
+                
             }
         }
     }
